@@ -1,0 +1,272 @@
+:root{
+    --second-bg-color:#FFFFFF;
+    --primary-bg-color:#FAF8F4;
+    --border-bg-color:#31322D;
+    --border-line-color:#4C4E46;
+    --txt-primary-color:#46433C;
+    --text-second-color:#CED0D1;
+    --txt-third-color:#A6A79E;
+    --txt-fourth-color:#4E4A4A;
+    --third-bg-color:#33322E;
+}
+
+@font-face {
+    font-family: anjaEliane;
+    src: url(./fonts/AnjaElianeaccent002.ttf);
+}
+
+@font-face {
+    font-family: dunkinSansRegular;
+    src: url(./fonts/DunkinSans.otf);
+}
+@font-face {
+    font-family: dunkinSansBold;
+    src: url(./fonts/DunkinSansBold.otf);
+}
+@font-face {
+    font-family: kgRedHands;
+    src: url(./fonts/KGRedHands.ttf);
+}
+
+
+
+.layout{
+    display: grid;
+    grid-template-columns:300px 1fr;
+    gap: 30px;
+    height: 100vh;
+    padding: 20px 100px;
+    background-color: var(--second-bg-color);
+}
+
+aside{
+    background-color: var(--primary-bg-color);
+    border-radius: 15px;
+    border: var(--border-bg-color) solid 3px;
+    box-shadow: 3px 3px 0px var(--border-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px 5px 20px;
+}
+
+.wrapper_iconsExternal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.iconsmall{
+    width: 25px;
+}
+
+.wrapper_borderPefil{
+    display: flex;
+    justify-content: center;
+}
+.wrapper_imgPerfil{
+    width: 80%;
+    height: 130px;
+    border-radius: 15px;
+    border: var(--border-bg-color) solid 3px;
+    box-shadow: 3px 3px 0px var(--border-bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper_imgPerfil img{
+    height: 100%;
+    filter: saturate(0%) contrast(90%) opacity(80%);
+    user-select: none !important;
+}
+
+.namePerfil{
+    color: var(--txt-primary-color);
+    font-family: anjaEliane;
+    font-weight:lighter;
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-size: 1.8rem;
+}
+
+.wrapper_titlePosition{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.titlePosition{
+    font-family: dunkinSansRegular;
+    font-size: 0.8rem;
+    background-color: var(--border-bg-color);
+    color: var(--text-second-color);
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight:lighter;
+}
+
+.lineDivider{
+    width: 100%;
+    height: 5px;
+    background-color: var(--border-line-color);
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.cardPerfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cardPerfil img{
+    width: 25px;
+}
+
+.cardPerfil .title {
+    color: var(--txt-third-color);
+    font-family: kgRedHands;
+    font-size: 0.8rem;
+}
+
+.cardPerfil .info{
+    font-family: kgRedHands;
+    font-size: 0.8em;
+    color: var(--txt-fourth-color); 
+}
+
+.container{
+    background-color: var(--primary-bg-color);
+    border: var(--border-bg-color) solid 3px;
+    box-shadow: 3px 3px 0px var(--border-bg-color);
+    border-radius: 15px;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    overflow: hidden; 
+    padding: 10px 20px; 
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 0;
+}
+
+nav{
+
+}
+
+nav .items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    background-color: var(--primary-bg-color);
+    border: var(--border-bg-color) solid 3px;
+    box-shadow: 1px 2px 0px var(--border-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.nav-item .link-item {
+    text-decoration: none;
+    padding: 20px 10px;
+    font-family:kgRedHands ;
+    font-size: 0.8rem;
+    color: var(--border-bg-color);
+}
+
+.nav-item .activeLink{
+    background-color: var(--border-bg-color);
+    color: var(--primary-bg-color);
+}
+
+header .titlePage{
+    font-family:anjaEliane ;
+    font-size: 1.5rem;
+    color: var(--third-bg-color);
+    border-bottom: var(--third-bg-color) solid 4px;
+    border-radius: 2px;
+}
+
+
+
+main{
+    overflow: auto;
+    flex-grow: 1;
+    min-height: 0; 
+}
+
+
+/* responsive */
+
+@media (min-width: 901px) {
+    .layout {
+        padding: 20px 50px; 
+        grid-template-columns: 300px 1fr; 
+    }
+}
+
+@media (max-width: 900px) {
+    .layout {
+        padding: 15px 20px; 
+        grid-template-columns: 280px 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .layout {
+        padding: 2px; 
+        grid-template-columns: 1fr; 
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .wrapper_borderPefil{
+        display: none;
+    }
+    .wrapper_titlePosition{
+        display: none;
+    }
+
+    .menuItems{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        display: flex;
+        width: 100%;
+    }
+
+    .items{
+        display: flex;
+        background-color: red;
+        width: 100%;
+    }
+    .namePerfil{
+        font-size: 1.6rem;
+    }
+}
+
+::-webkit-scrollbar {
+    height: auto;
+    width: 17px;
+    background: var(--second-bg-color);
+    border: var(--border-bg-color) solid 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-bg-color);
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: green;
+  }

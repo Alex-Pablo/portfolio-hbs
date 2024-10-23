@@ -1,0 +1,43 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    border: 3px solid  var(--border-bg-color);
+    box-shadow: 3px 3px 0px var(--border-bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align:justify;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 450px;
+}
+
+
+
+.tileCard{
+    font-family: kgRedHands;
+    font-size: 1rem;
+}
+
+
+.descriptionCard{
+    font-family: kgRedHands;
+    font-size: 0.8rem;
+    color: var(--txt-fourth-color);
+}
+
+.wrapper_img{
+    display: flex;
+    justify-content: center;
+}
+
+.imgHorizontal{
+    height: 230px !important;
+}
